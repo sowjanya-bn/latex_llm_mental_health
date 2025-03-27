@@ -1,0 +1,53 @@
+% !TEX root = main.tex
+\documentclass[12pt, letterpaper]{article} % Choose article, report, or book class
+
+% --- Preamble ---
+\usepackage[utf8]{inputenc}       % For Unicode characters
+\usepackage{amsmath, amssymb}     % Math symbols
+\usepackage{graphicx}           % Include images
+\usepackage{geometry}           % Adjust margins
+\usepackage{hyperref}             % Create clickable links
+\usepackage{natbib}             % For citation management
+\usepackage{xcolor}             % For color options
+\usepackage{float}              % For precise figure placement
+\usepackage{lipsum}             % For dummy text (remove in final document)
+\usepackage{setspace}         %For setting line spacing (e.g., double spacing)
+
+% --- Customization ---
+\geometry{a4paper, margin=1in}   % Set page margins
+\hypersetup{colorlinks=true,   % Color links instead of boxes
+            linkcolor=blue,
+            citecolor=blue,
+            urlcolor=blue}
+
+\title{A Comprehensive Literature Review on [LLMs For ​Mental Health Therapeutics​]}
+\author{Your Name\\Your Affiliation}
+\date{\today}
+
+% --- Begin Document ---
+\begin{document}
+
+\maketitle  % Display title, author, and date
+
+\begin{abstract}
+    \input{abstract} % Include the content of abstract.tex
+\end{abstract}
+
+\tableofcontents % Add table of contents
+
+\section{Introduction}
+    \input{introduction} % Include the content of introduction.tex
+
+\section{Topic 1: [Specific Theme]}
+    \input{history_of_llm} % Include the content of section_topic1.tex
+
+\section{Topic 2: [Another Theme]}
+    \input{privacy_concerns} % Include the content of section_topic2.tex
+
+\section{Conclusion}
+    \input{conclusion} % Include the content of conclusion.tex
+
+\bibliographystyle{apalike}  % Choose citation style (e.g., apa, chicago, plain)
+\bibliography{references}  % Link to your references.bib file
+
+\end{document}
