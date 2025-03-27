@@ -1,0 +1,14 @@
+PWD /Users/sowjanya/code/researchmethods/latex_llm_mental_health
+INPUT /usr/local/texlive/2025/texmf.cnf
+INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/sowjanya/code/researchmethods/latex_llm_mental_health/privacyconcerns.tex
+OUTPUT privacyconcerns.log
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm

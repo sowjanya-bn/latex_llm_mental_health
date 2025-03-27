@@ -1,6 +1,14 @@
 # Fdb version 4
-["pdflatex"] 1743098636.14704 "/Users/sowjanya/code/researchmethods/latex_llm_mental_health/main.tex" "main.pdf" "main" 1743098636.63737 2
-  "/Users/sowjanya/code/researchmethods/latex_llm_mental_health/main.tex" 1743098628.45809 1858 57d5a255a2ed0824970f4d2cbfce6928 ""
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1743101105.73345 -1
+  "./references.bib" 1743079047.05741 713 9e1618a9c1ad22cc7e3f30a2a89a741d ""
+  "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
+  "main.aux" 1743101105.60419 1155 9d41215bb6c9c29bd5e52699e649ded4 "pdflatex"
+  (generated)
+  "main.bbl"
+  "main.blg"
+  (rewritten before read)
+["pdflatex"] 1743101105.20746 "/Users/sowjanya/code/researchmethods/latex_llm_mental_health/main.tex" "main.pdf" "main" 1743101105.73358 2
+  "/Users/sowjanya/code/researchmethods/latex_llm_mental_health/main.tex" 1743101104.92398 1919 2a58b3bcd6a404a2079fe414ce94f55b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
@@ -14,11 +22,13 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
@@ -87,11 +97,15 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1743082194 2663803 8bf74f26e8763800e90a41c0808dd1ba ""
   "/usr/local/texlive/2025/texmf.cnf" 1743082163.24154 577 418a7058ec8e006d8704f60ecd22c938 ""
   "abstract.tex" 1743098635.85072 314 40c01e1bab86aa9fee050b7df1b77494 ""
-  "introduction.tex" 1743079006.03996 156 7e15ec49f5058a202e4564ce22473e05 ""
-  "main.aux" 1743098636.56273 271 0fcd30974b3131590636e62d3f632b2b "pdflatex"
-  "main.out" 1743098636.56322 103 9814c2d956916adb9290eca4e25c967a "pdflatex"
-  "main.tex" 1743098628.45809 1858 57d5a255a2ed0824970f4d2cbfce6928 ""
-  "main.toc" 1743098636.56349 68 422450c2a666dfbf59c2f9003cf3f68d "pdflatex"
+  "conclusion.tex" 1743100634.44452 122 cc915c30b9b96340ac05836a750cb861 ""
+  "history.tex" 1743100555.72575 123 3c75fcf2ab6a7d0b8db52c43736f595c ""
+  "introduction.tex" 1743100373.82109 124 0d52837b1193c0c0bc41c908506b624c ""
+  "main.aux" 1743101105.60419 1155 9d41215bb6c9c29bd5e52699e649ded4 "pdflatex"
+  "main.bbl" 1743100571.937 356 973d3c74bf9b8da86104d3980154bd90 "bibtex main"
+  "main.out" 1743101105.6048 686 fc97f29226cc93ae3612f00fda8b0645 "pdflatex"
+  "main.tex" 1743101104.92398 1919 2a58b3bcd6a404a2079fe414ce94f55b ""
+  "main.toc" 1743101105.60505 433 9ec3c1bdfb1c0bb3bfda7ba95fe169de "pdflatex"
+  "privacyconcerns.tex" 1743101097.90115 173 91d16f970e76604aa43d0c8580ecb576 ""
   (generated)
   "main.aux"
   "main.log"
