@@ -1,0 +1,35 @@
+Recent advancements in large language models (LLMs) have opened new possibilities in the field of digital mental health, offering scalable solutions for early detection, diagnosis, and support. However, these systems are not without challenges. This section explores the data sources, fine-tuning methods, performance trade-offs, and ethical implications of using AI-driven chatbots in mental health contexts. We highlight the impact of training data biases, discuss the balance between speed and accuracy, and examine real-world risks including misinformation, user trust, and demographic disparities.
+
+\subsection{Training Data and Bias}
+
+Chatbots and AI mental health models are typically trained on social media data, psychotherapy transcripts, and electronic health records (EHRs) to detect emotional distress and mental health conditions \cite{arriba2024}. Common datasets include Dreaddit, DepSeverity, SDCNL, and CSSRS-Suicide, often sourced from Reddit with expert annotations for tasks like stress prediction and suicide risk detection \cite{arriba2024}.
+
+However, reliance on Reddit-based datasets introduces user and demographic biases, limiting generalizability \cite{li2023}. These models often reinforce user distress rather than challenge it, increasing the likelihood of false positives \cite{gbollie2023}. Biases also emerge from lack of racial and gender diversity in training datasets, which can skew chatbot responses \cite{arriba2024}. Even expert-annotated content can carry stereotypes and normative assumptions.
+
+\subsection{Speed vs. Accuracy Trade-offs}
+
+Larger models like GPT-4 and FLAN-T5 are optimized for speed but may lack the specificity of smaller, fine-tuned models like Mental-Alpaca, which excel in domain-specific tasks \cite{xu2024}. Streaming models allow real-time interaction but require continuous updates \cite{mcgorry2025}, whereas batch models are slower but more accurate.
+
+\subsection{Fine-tuning and Performance}
+
+Fine-tuning strategies such as instruction tuning and LoRA (Low-Rank Adaptation) have improved LLM performance on Cognitive Behavioral Therapy (CBT) tasks. These models minimize prediction error using cross-entropy loss during training \cite{na2024}. Mental-FLAN-T5, for example, outperforms GPT-4 by 4.8\% in balanced accuracy \cite{xu2024}.
+
+\subsection{Coherence and Logical Flow}
+
+Fine-tuned models outperform general-purpose LLMs like GPT-4 in logical consistency and contextual understanding \cite{stade2024}. Woebot and Wysa deliver more structured responses than generative models \cite{greco2023}. GPT-based models may vary responses based on prompt phrasing, occasionally generating overly generic or logically inconsistent replies \cite{sejnowski2023}.
+
+\subsection{Handling Ambiguity}
+
+Fine-tuned models demonstrate stronger performance on vague or ambiguous mental health queries, while zero-shot models default to binary responses. Few-shot prompting improves accuracy by approximately 4.1\% in GPT-4 \cite{xu2024}.
+
+\subsection{User Engagement and Trust}
+
+While 81.1\% of university students are willing to use AI chatbots for mental health support, only 4\% have actually done so \cite{gbollie2023}. Privacy concerns, stigma, and fear of misdiagnosis limit adoption. However, users who avoid traditional therapy are more open to digital tools.
+
+\subsection{Limitations and Misinformation Risks}
+
+Despite high accuracy in detecting conditions like depression or cognitive impairment (96\%+ and 80\%, respectively) \cite{greco2023}, risks of misinformation, overgeneralization, and ethical concerns persist. LLMs often lack systematic evaluation mechanisms, making their predictions potentially unreliable for high-stakes applications.
+
+\subsection{Summary of Efficacy and Limitations}
+
+Studies highlight the promise of AI mental health models like CBT-LLM, which show superior response quality through fine-tuning \cite{na2024}. However, their ability to truly understand and reason about mental health remains in question \cite{sejnowski2023}. More rigorous evaluation, ethical safeguards, and transparency are necessary before widespread deployment \cite{stade2024, li2023}.
