@@ -1,35 +1,50 @@
-Recent advancements in large language models (LLMs) have opened new possibilities in the field of digital mental health, offering scalable solutions for early detection, diagnosis, and support. However, these systems are not without challenges. This section explores the data sources, fine-tuning methods, performance trade-offs, and ethical implications of using AI-driven chatbots in mental health contexts. We highlight the impact of training data biases, discuss the balance between speed and accuracy, and examine real-world risks including misinformation, user trust, and demographic disparities.
+Recent advancements in large language models (LLMs) have opened up more relevance in the field of digital mental health, offering scalable solutions for early detection, diagnosis and support. 
+But the efficacy of the models is a very important consideration. 
+ 
+This section explores the data sources, fine-tuning methods, performance trade-offs, and ethical implications of using AI-driven chatbots in mental health contexts. We highlight the impact of training data biases, discuss the balance between speed and accuracy and examine real-world risks including misinformation, user trust and demographic disparities.
 
-\subsection{Training Data and Bias}
+\section{Model Training and Evaluation of LLMs in Mental Health}
 
-Chatbots and AI mental health models are typically trained on social media data, psychotherapy transcripts, and electronic health records (EHRs) to detect emotional distress and mental health conditions \cite{arriba2024}. Common datasets include Dreaddit, DepSeverity, SDCNL, and CSSRS-Suicide, often sourced from Reddit with expert annotations for tasks like stress prediction and suicide risk detection \cite{arriba2024}.
+\subsection{Model Training and Biases}
 
-However, reliance on Reddit-based datasets introduces user and demographic biases, limiting generalizability \cite{li2023}. These models often reinforce user distress rather than challenge it, increasing the likelihood of false positives \cite{gbollie2023}. Biases also emerge from lack of racial and gender diversity in training datasets, which can skew chatbot responses \cite{arriba2024}. Even expert-annotated content can carry stereotypes and normative assumptions.
+Chatbots and AI models designed for mental health support are predominantly trained on datasets derived from social media platforms, psychotherapy transcripts, and electronic health records (EHRs). A majority of models in the literature have been fine-tuned specifically for mental health prediction tasks using benchmark datasets such as \textit{Dreaddit}, \textit{DepSeverity}, \textit{SDCNL}, and \textit{CSSRS-Suicide} \cite{arriba2024}. These datasets are often annotated by human experts and sourced primarily from Reddit, enabling models to perform tasks such as binary stress classification, depression detection, and suicide risk estimation. While these data sources provide scalability, they also introduce significant demographic and cultural biases.
 
-\subsection{Speed vs. Accuracy Trade-offs}
+Bias remains a persistent challenge. Studies have highlighted how the overreliance on Reddit-based data skews model generalizability, often failing to capture the nuances of underrepresented groups \cite{li2023, gbollie2023}. Diagnostic models trained on such datasets may inadvertently reinforce users’ distress rather than challenge cognitive distortions, potentially increasing false positives. Furthermore, a lack of diversity in training data has led to measurable racial and gender biases in chatbot responses \cite{arriba2024}. Even expert-annotated corpora are susceptible to embedded stereotypes and confirmation bias, raising concerns about the validity of ground-truth labels \cite{greco2023}.
 
-Larger models like GPT-4 and FLAN-T5 are optimized for speed but may lack the specificity of smaller, fine-tuned models like Mental-Alpaca, which excel in domain-specific tasks \cite{xu2024}. Streaming models allow real-time interaction but require continuous updates \cite{mcgorry2025}, whereas batch models are slower but more accurate.
+\subsection{Trade-Offs in Performance and Design}
 
-\subsection{Fine-tuning and Performance}
+Performance trade-offs are evident across model size, inference method, and processing strategy. Larger general-purpose models such as GPT-4 and FLAN-T5 offer faster response times, while smaller fine-tuned models like Mental-Alpaca often achieve higher task-specific accuracy \cite{xu2024}. Improved prompt engineering can enhance inference speed, but often at the cost of response quality. Stream-processing models allow for real-time interaction but demand continuous updating, whereas batch-processing models deliver greater accuracy by processing data in aggregate — albeit with delayed outputs \cite{mcgorry2025}.
 
-Fine-tuning strategies such as instruction tuning and LoRA (Low-Rank Adaptation) have improved LLM performance on Cognitive Behavioral Therapy (CBT) tasks. These models minimize prediction error using cross-entropy loss during training \cite{na2024}. Mental-FLAN-T5, for example, outperforms GPT-4 by 4.8\% in balanced accuracy \cite{xu2024}.
+Fine-tuning strategies play a central role in improving performance. Approaches such as instruction tuning and LoRA (Low-Rank Adaptation) have been applied to enhance LLMs for cognitive behavioral therapy (CBT) tasks. These models optimize predictions using cross-entropy loss, reducing divergence from human-labeled data \cite{na2024}.
 
-\subsection{Coherence and Logical Flow}
+\subsection{Accuracy, Coherence, and Logical Structure}
 
-Fine-tuned models outperform general-purpose LLMs like GPT-4 in logical consistency and contextual understanding \cite{stade2024}. Woebot and Wysa deliver more structured responses than generative models \cite{greco2023}. GPT-based models may vary responses based on prompt phrasing, occasionally generating overly generic or logically inconsistent replies \cite{sejnowski2023}.
+Transformer-based models have shown high accuracy in mental health tasks — with some detecting depression at rates exceeding 96\%, and chatbot-based models for cognitive impairment reaching over 80\% accuracy and 85\% recall \cite{greco2023, mcgorry2025}. Fine-tuned models such as Mental-FLAN-T5 consistently outperform zero-shot models like GPT-4 by up to 4.8\% in balanced accuracy \cite{xu2024}. However, zero-shot performance remains inconsistent, often fluctuating between 50\% and 83\% based on prompt structure.
 
-\subsection{Handling Ambiguity}
+In terms of coherence, rule-based conversational agents like Woebot and Wysa tend to outperform generative models in logical consistency and structure \cite{stade2024}. While GPT-4 responses are generally fluent, they can be overly generic and lack context-specific insight. In contrast, fine-tuned models offer more domain-relevant outputs. Notably, GPT-based models are sensitive to prompt phrasing, leading to variability in output quality and occasional overgeneralization — particularly in nuanced cases such as suicide risk \cite{sejnowski2023}.
 
-Fine-tuned models demonstrate stronger performance on vague or ambiguous mental health queries, while zero-shot models default to binary responses. Few-shot prompting improves accuracy by approximately 4.1\% in GPT-4 \cite{xu2024}.
+\subsection{Risk of Misinformation and Ethical Implications}
 
-\subsection{User Engagement and Trust}
+Numerous studies caution against the misuse of LLMs in high-stakes contexts. Despite their sophistication, generative models are prone to producing “falsely reasonable” yet incorrect outputs. This poses a significant risk in mental health settings, where the consequences of misinformation can be severe. The absence of robust, systematic evaluation frameworks for mental health reasoning further compounds the issue \cite{greco2023}. In addition, the use of sensitive training data raises major concerns about privacy, consent, and ethical safeguards \cite{arriba2024}.
 
-While 81.1\% of university students are willing to use AI chatbots for mental health support, only 4\% have actually done so \cite{gbollie2023}. Privacy concerns, stigma, and fear of misdiagnosis limit adoption. However, users who avoid traditional therapy are more open to digital tools.
+The potential for discriminatory outputs is fairly high given the lack of fairness assessments across different subgroups of population. Vulnerable users, including those in crisis, are particularly susceptible to receiving inaccurate or even harmful advice.
 
-\subsection{Limitations and Misinformation Risks}
+\subsection{Real-Time Performance vs. Quality}
 
-Despite high accuracy in detecting conditions like depression or cognitive impairment (96\%+ and 80\%, respectively) \cite{greco2023}, risks of misinformation, overgeneralization, and ethical concerns persist. LLMs often lack systematic evaluation mechanisms, making their predictions potentially unreliable for high-stakes applications.
+While real-time models like GPT-4 excel in responsiveness, fine-tuned models such as Mental-FLAN-T5 yield more accurate and context-sensitive results with lower computational demands \cite{xu2024}. Enhancing model accuracy through prompt engineering often increases processing time. However, instruction-fine-tuned models manage to balance inference speed with depth of response more efficiently than zero-shot systems.
 
-\subsection{Summary of Efficacy and Limitations}
+\subsection{Handling Ambiguity in User Prompts}
 
-Studies highlight the promise of AI mental health models like CBT-LLM, which show superior response quality through fine-tuning \cite{na2024}. However, their ability to truly understand and reason about mental health remains in question \cite{sejnowski2023}. More rigorous evaluation, ethical safeguards, and transparency are necessary before widespread deployment \cite{stade2024, li2023}.
+Fine-tuned models have demonstrated superior contextual understanding of vague or ambiguous queries related to stress or depression. In contrast, zero-shot models frequently default to binary or overly simplified interpretations. Few-shot learning methods have shown to improve GPT-4’s performance by around 4.1\% on ambiguous mental health queries \cite{xu2024}, indicating the need for more adaptable model architectures in this space.
+
+\subsection{User Willingness and Perceptions}
+
+User receptivity remains high, with 81.1\% of university students reporting willingness to engage with mental health chatbots — though only 4\% have done so in practice \cite{gbollie2023}. Younger demographics (18–35) show higher adoption rates, while users in acute distress often prefer human counselors due to trust and safety concerns.
+
+Preferences are influenced by multiple factors. Stigma around seeking therapy makes some users favour AI over traditional face-to-face approaches. Conversational AI models like GPT-4 are generally preferred due to flexible and natural interaction. Rule-based model responses can often be repeated due to a fixed response database. However, concerns around privacy, transparency, and the potential for AI-generated errors remain key barriers to adoption.
+
+\subsection{Outlook and Efficacy}
+
+Emerging models such as CBT-LLM exemplify domain-specific fine-tuning tailored for psychological support. Evaluations show that such models outperform generic LLMs in both fluency and therapeutic relevance \cite{na2024}. Despite their promise, several researchers question whether LLMs truly “understand” mental health concerns or merely reflect user input in plausible ways — a phenomenon likened to a “reverse Turing test” \cite{sejnowski2023}.
+
+A broader body of research suggests that while LLMs may augment therapists and automate diagnostics, they are not yet reliable standalone tools. Studies have shown marked symptom improvement using chatbot interventions (Hedge’s g = 0.64 for depression and 0.7 for distress) \cite{stade2024}, but little impact on long-term psychological well-being. Lastly, transformer-based models like BERT continue to demonstrate high efficacy for mental health classification, though their success remains closely tied to data quality and fine-tuning depth \cite{greco2023, li2023}.
