@@ -8,3 +8,4 @@
 *.out
 *.synctex.gz
 /.latex/
+.latex/main.pdf
