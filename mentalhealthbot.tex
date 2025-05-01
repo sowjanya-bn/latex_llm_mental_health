@@ -1,5 +1,5 @@
 \subsection{Bot Comparison Tool} 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{bot_comparison_tool.jpeg}
     \caption{Comparison tool of Different Types of Mental Health Chatbots}
@@ -12,8 +12,7 @@ We built this comparison to help understand the different types of mental health
 
 
 \subsection{Dataset Impact Comparison} 
-GPT2 base model (nsbarla/gpt2-base) was used for this comparison. Three bots were trained using different datasets: one with a Reddit dataset (nsbarla/gpt2-reddit), another with empathy data from Hugging Face (nsbarla/gpt2-empathy), which specializes in generating empathetic responses. These three models were prompted with the same input, and their outputs were compared. By analyzing the responses, the dataset helps evaluate how each model handles emotional tone, empathy, and engagement. This comparison provides insights into how the different types of training influence the bot's ability to respond to sensitive or personal topics.
-
+This dataset presents a comparative analysis of three chatbot models built upon the GPT-2 base architecture (nsbarla/gpt2-base), each fine-tuned with different training data to explore their responsiveness to emotionally sensitive prompts. One model was trained on a Reddit dataset (nsbarla/gpt2-reddit), another on empathy-rich conversations from Hugging Face (nsbarla/gpt2-empathy) and the third remained as the unaltered baseline. All three models were exposed to the same set of ten distress-related prompts, and their outputs were recorded for comparison. The responses are unique across the models, offering insight into how different training influences affect tone, empathy, and coherence. The empathy-tuned model generally strives to offer supportive or compassionate replies, although some are shallow or lack contextual depth. The Reddit-style model frequently mirrors informal, narrative-driven responses, occasionally incorporating anecdotal elements reflective of real-world user conversations. Conversely, the vanilla model often produces short, vague, or incomplete outputs, indicating limited emotional understanding and generative capacity. Collectively, the dataset reveals distinct stylistic and qualitative differences, shedding light on how training data shapes a model’s ability to engage with sensitive or personal topics.
 \begin{table}[H]
     \centering
     \tiny
