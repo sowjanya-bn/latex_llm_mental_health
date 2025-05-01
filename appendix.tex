@@ -1,0 +1,28 @@
+\usepackage{csvsimple}
+\usepackage{attachfile2}
+
+
+\section{Appendix}
+
+\appendix
+
+\section{Datasets Used}
+\label{appendix:datasets}
+We used the following datasets to fine-tune and evaluate the chatbot models. 
+
+\begin{itemize}
+    \item \textbf{Reddit Dataset 1: Depression Posts (TF-IDF Features)} \\
+    A structured dataset containing Reddit posts from depression-related subreddits, with text features pre-processed using TF-IDF vectors. We specifically used the file \texttt{depression\_post\_features\_tfidf\_256.csv} available via Zenodo: \\
+    \url{https://zenodo.org/records/3941387}
+    
+    \item \textbf{Reddit Dataset 2: Suicide Risk Posts} \\
+    This dataset includes labeled Reddit posts from 500 users related to suicide risk with annotations, making it useful for identifying emotionally sensitive content. Hugging Face: \\
+    \url{https://huggingface.co/datasets/m4faisal/RedditSuicide/commit/5e57cc7e2ebc706b98fbd853a2c52c10b582cd73}
+    
+    \item \textbf{Empathetic Dialogues Dataset} \\
+    A conversational dataset containing 25,000+ short textual dialogues grounded in emotional situations, designed to train models to respond empathetically. Hugging Face: \\
+    \url{https://huggingface.co/datasets/facebook/empathetic_dialogues}
+\end{itemize}
+
+These datasets were used to fine-tune different variants of the GPT-2 base model, enabling controlled comparisons of style, emotional engagement, and empathy.
+
